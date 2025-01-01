@@ -1,0 +1,169 @@
+#about {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    padding: 100px 0;
+    color: #ffffff;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+#about h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: #00ff8c;
+    border-radius: 2px;
+}
+
+.profile-image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.rounded-circle {
+    border: 4px solid #00ff8c;
+    padding: 5px;
+    transition: all 0.3s ease;
+    filter: grayscale(20%);
+}
+
+.rounded-circle:hover {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+    box-shadow: 0 0 30px rgba(0, 255, 140, 0.3);
+}
+
+#about h3 {
+    color: #00ff8c;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    font-weight: 700;
+}
+
+#about .text-muted {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 1.1rem;
+}
+
+#about .card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+#about .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#about .card-title {
+    color: #00ff8c;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(0, 255, 140, 0.2);
+    padding-bottom: 10px;
+}
+
+#about p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+#about p:hover {
+    color: #00ff8c;
+    transform: translateX(10px);
+}
+
+#about p i {
+    color: #00ff8c;
+    width: 25px;
+    transition: all 0.3s ease;
+}
+
+.badge {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#about .bg-light {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 15px;
+    padding: 20px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.social-links .btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+}
+
+.social-links .btn:hover {
+    transform: translateY(-5px) rotate(360deg);
+}
+
+.btn-github { background: #333; }
+.btn-linkedin { background: #0077B5; }
+.btn-twitter { background: #1DA1F2; }
+.btn-youtube { background: #FF0000; }
+.btn-hackerrank { background: #2EC866; }
+
+@media (max-width: 768px) {
+    #about h2 {
+        font-size: 2rem;
+    }
+    
+    .rounded-circle {
+        width: 200px !important;
+    }
+    
+    #about .card {
+        margin-top: 2rem;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 0.5s ease-out forwards;
+}

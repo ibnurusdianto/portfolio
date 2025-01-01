@@ -1,0 +1,144 @@
+#project {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    padding-top: 100px !important;
+}
+
+#project h2 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+#project h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 3px;
+    background: #00ff8c;
+    border-radius: 3px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 1.5rem;
+    background: rgba(33, 37, 41, 0.95);
+}
+
+.card-title {
+    color: #00ff8c;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    min-height: 80px;
+}
+
+.card .btn {
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.card .btn-primary {
+    background: #2d2d2d;
+    border: none;
+}
+
+.card .btn-primary:hover {
+    background: #00ff8c;
+    color: #1a1a1a;
+    transform: translateY(-2px);
+}
+
+.card .btn-success {
+    background: transparent;
+    border: 2px solid #00ff8c;
+    color: #00ff8c;
+}
+
+.card .btn-success:hover {
+    background: #00ff8c;
+    color: #1a1a1a;
+    transform: translateY(-2px);
+}
+
+.card i {
+    transition: all 0.3s ease;
+}
+
+.card:hover i {
+    transform: rotate(360deg);
+}
+
+@media (max-width: 768px) {
+    #project h2 {
+        font-size: 2rem;
+    }
+    
+    .card {
+        margin-bottom: 2rem;
+    }
+    
+    .card-text {
+        min-height: auto;
+    }
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.col-md-4 {
+    animation: cardAppear 0.5s ease-out forwards;
+}
+
+.col-md-4:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.col-md-4:nth-child(3) {
+    animation-delay: 0.4s;
+}
